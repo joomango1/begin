@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - welcome</title>
+  <meta charset="utf-8">
+  <style>                               /* 우선순위 # =id선택자>.=클래스선택자>태그선택자 */
+   a{
+      color:black;
+      text-decoration: none;
+
+   }
+   .saw {
+
+      color:gray;
+
+   }
+   #active{
+      color:red;
+   }
+
+  h1{                            /*박스 모델을 활용하기 */
+    font-size:60px;
+    text-align: center;
+    border-bottom:1px solid gray;
+    margin:0;
+    padding:20px;
+  }
+
+  ol{
+       border-right:1px solid gray;
+       width:230px;
+       margin:0;
+  }
+#grid{                                        /*그리드 선택자기능은 div묶음 좌우 나누기*/
+        display: grid;
+        grid-template-columns: 300px 1fr;
+}
+#grid ol{                               /*그리드 안에 ol태그만적용구분확실하게 */
+
+  padding-left :20px;
+}
+#grid #article{         /*그리드 안에 아티클 선택자적용  의무방법은 아님 아이디 선택자이기때문*/
+                        /*아티클 선택자안에 있는것의 패딩값 변경 */
+           pedding-left:25px;
+}
+
+  </style>
+
+</head>
+<!--#을 붙인것은 id선택자로 클래스 선택자를 이긴다, 클래스 vs 태그 = 클래스  -->
+
+<body>
+
+ <h1><a href="index.html"> WEB</a></h1>
+
+<div id="grid">                                    <!-- div를 확용해서 두구간을 묶어서 구분시킨다.-->
+  <ol>
+    <li><a href="1.html" class="saw">HTML</a></li>
+    <li><a href="2.html" class="saw" id="active">CSS  CSS적용방법 2. 직접쓴다.</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+
+ <div id="article">
+    <!-- 나란히 배치하기 위해서  grid 사용-->
+    NAVIGATION
+        <!--디자인 목적으로 div사용하는것 의미 목적없습니다!-->
+    1111111
+ </div>
+</div>
+
+  </body>
+  </html>
+
+
+<!--#을 붙이면 .클래스 선택자를 이긴다, 클래스 vs 태그 = 클래스-->
